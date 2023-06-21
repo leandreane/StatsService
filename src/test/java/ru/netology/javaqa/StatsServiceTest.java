@@ -12,7 +12,7 @@ public class StatsServiceTest {
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedDay = 9;
-        int actualDay = service.AmountSalesMin(sales);
+        int actualDay = service.amountSalesMin(sales);
 
         Assertions.assertEquals(expectedDay, actualDay);
     }
@@ -24,7 +24,7 @@ public class StatsServiceTest {
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedDay = 8;
-        int actualDay = service.AmountSalesMax(sales);
+        int actualDay = service.amountSalesMax(sales);
 
         Assertions.assertEquals(expectedDay, actualDay);
     }
@@ -48,7 +48,7 @@ public class StatsServiceTest {
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expected = 15;
-        long actual = service.AverageAmountSales(sales);
+        long actual = service.averageAmountSales(sales);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -59,8 +59,8 @@ public class StatsServiceTest {
 
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedDay = 8;
-        int actualDay = service.AmountSalesMax(sales);
+        int expectedDay = 5;
+        int actualDay = service.minAverageSales(sales);
 
         Assertions.assertEquals(expectedDay, actualDay);
     }
@@ -71,8 +71,8 @@ public class StatsServiceTest {
 
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedDay = 8;
-        int actualDay = service.AmountSalesMax(sales);
+        int expectedDay = 5;
+        int actualDay = service.maxAverageSales(sales);
 
         Assertions.assertEquals(expectedDay, actualDay);
     }

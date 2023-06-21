@@ -1,7 +1,7 @@
 package ru.netology.javaqa;
 
 public class StatsService {
-    public int AmountSalesMin(int[] sales) {
+    public int amountSalesMin(int[] sales) {
 
         int amountSales = 0;
 
@@ -13,7 +13,7 @@ public class StatsService {
         return amountSales + 1;
     }
 
-    public int AmountSalesMax(int[] sales) {
+    public int amountSalesMax(int[] sales) {
 
         int amountSales = 0;
 
@@ -36,7 +36,7 @@ public class StatsService {
         return amountSales;
     }
 
-    public int AverageAmountSales(int[] sales) {
+    public int averageAmountSales(int[] sales) {
 
         int amountSales = 0;
 
@@ -51,11 +51,9 @@ public class StatsService {
     public int minAverageSales(int[] sales) {
 
         int minAverageMonth = 0;
-
-        int averageSum = minAverageSales(sales);
-
         for (long sale : sales) {
-            if (sale <= averageSum) {
+            if (sale < averageAmountSales(sales)) {
+
                 minAverageMonth++;
             }
         }
@@ -67,10 +65,9 @@ public class StatsService {
 
         int maxAverageMonth = 0;
 
-        int averageSum = maxAverageSales(sales);
-
         for (long sale : sales) {
-            if (sale >= averageSum) {
+            if (sale > averageAmountSales(sales)) {
+
                 maxAverageMonth++;
             }
         }
